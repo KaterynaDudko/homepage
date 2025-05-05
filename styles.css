@@ -71,6 +71,46 @@ body {
 .contact-info__sub-header {
     color: var(--secondary-text-color);
     margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.contact-info__sub-header_icon {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: #4c4c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* above the icon */
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.contact-info__sub-header_icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-info__sub-header_icon:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.contact-info__sub-header_icon path {
+    fill: var(--icon-color);
 }
 
 .contact-info__block {
@@ -282,6 +322,11 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+.footer__text {
+    text-align: center;
+    color: var(--durability-text-color);
 }
 
 /* ============================================

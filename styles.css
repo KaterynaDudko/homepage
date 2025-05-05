@@ -105,6 +105,7 @@ body {
     opacity: 1;
 }
 
+
 .contact-info__sub-header_icon:hover {
     transform: rotate(360deg) scale(1.2);
 }
@@ -186,6 +187,15 @@ body {
 .intro_text {
     color: var(--secondary-text-color);
     text-align: justify;
+}
+
+#intro_text_by-cats {
+    display: none;
+}
+
+#intro_text_by-me,
+#intro_text_by-cats {
+    transition: opacity 0.3s ease;
 }
 
 /* ===============================

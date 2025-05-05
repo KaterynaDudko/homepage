@@ -101,7 +101,7 @@
                   ></path>
                 </svg>
               </div>
-              <p class="intro_text">
+              <p class="intro_text" id="intro_text_by-me">
                 Hi, I’m Kateryna — a resilient and creative software developer.
                 <br />
                 I bring two years of experience at OneReach.ai, where I build
@@ -115,6 +115,19 @@
                 <br />
                 This is my way of showing who I am: someone who keeps building,
                 keeps learning, and always comes back stronger.
+              </p>
+              <p class="intro_text" id="intro_text_by-cats">
+                About Our Human 🐾
+                <br />
+                Hi there. We’re Khromka & Pandasya, the real bosses around here.
+                <br />
+                Our human, Catherine, is great at that typing stuff. She makes
+                the box glow and talks to invisible people on the screen.
+                <br />
+                She gives excellent chin rubs and only sometimes forgets snack
+                time. 10/10 would nap near again.
+                <br />
+                Hire her. Or us. We're available for remote work (and naps).
               </p>
             </div>
           </div>
@@ -293,5 +306,20 @@
         </div>
       </div>
     </main>
+    <script>
+      const catBadge = document.querySelector(".contact-info__sub-header_icon");
+      const aboutHuman = document.getElementById("intro_text_by-me");
+      const aboutCats = document.getElementById("intro_text_by-cats");
+
+      catBadge.addEventListener("mouseenter", () => {
+        aboutHuman.style.display = "none";
+        aboutCats.style.display = "block";
+      });
+
+      catBadge.addEventListener("mouseleave", () => {
+        aboutHuman.style.display = "block";
+        aboutCats.style.display = "none";
+      });
+    </script>
   </body>
 </html>

@@ -16,8 +16,8 @@ body {
     --secondary-text-color: #5c5c62;
     --durability-text-color: #6a737d9c;
     --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: #dd15c5;
+    --text-decoration-color: #9941e1;
 }
 
 .container {
@@ -151,16 +151,38 @@ body {
 /* ===============================
    Skills styles
    =============================== */
+.skills {
+    display: flex;
+}
+
+.skills__hard-skills {
+    flex: 1 1 60%;
+}
+
+.skills__soft-skills {
+    flex: 1 1 40%;
+}
 
 .skills__header {
     color: var(--secondary-text-color);
-    text-align: center;
+    text-align: left;
     margin-bottom: 15px;
 }
 
-.skills__text {
+.skills__list {
     color: var(--secondary-text-color);
     text-align: justify;
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills__hard-skills .skills__list-item::before {
+    content: "💡 ";
+    margin-right: 8px;
+}
+
+.skills__soft-skills .skills__list-item::before {
+    content: "🌱 ";
 }
 
 /* ===============================
@@ -222,6 +244,7 @@ body {
 
 .additional-info {
     flex: 1 1 40%;
+    justify-content: flex-start;
 }
 
 .additional-info__education {
@@ -249,10 +272,6 @@ body {
 
 .additional-info__education-university-name {
     color: var(--secondary-text-color);
-}
-
-.additional-info__languages {
-    margin-bottom: 20px;
 }
 
 .additional-info__languages-header {

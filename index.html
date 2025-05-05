@@ -13,8 +13,17 @@
         <div class="container">
           <div class="resume__block">
             <h1 class="contact-info__header">Kateryna Dudko</h1>
-            <h3 class="contact-info__sub-header">Full-Stack Developer</h3>
-
+            <div class="contact-info__sub-header">
+              <h3>Full-Stack Developer</h3>
+              <div class="contact-info__sub-header_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM160 154.4c0-5.8 4.7-10.4 10.4-10.4l.2 0c3.4 0 6.5 1.6 8.5 4.3l40 53.3c3 4 7.8 6.4 12.8 6.4l48 0c5 0 9.8-2.4 12.8-6.4l40-53.3c2-2.7 5.2-4.3 8.5-4.3l.2 0c5.8 0 10.4 4.7 10.4 10.4L352 272c0 53-43 96-96 96s-96-43-96-96l0-117.6zM216 288a16 16 0 1 0 0-32 16 16 0 1 0 0 32zm96-16a16 16 0 1 0 -32 0 16 16 0 1 0 32 0z"
+                  />
+                </svg>
+                <span class="tooltip-text">Cat Approved</span>
+              </div>
+            </div>
             <div class="contact_info_container fh">
               <div class="contact-info__block"></div>
 
@@ -92,7 +101,7 @@
                   ></path>
                 </svg>
               </div>
-              <p class="intro_text">
+              <p class="intro_text" id="intro_text_by-me">
                 Hi, I’m Kateryna — a resilient and creative software developer.
                 <br />
                 I bring two years of experience at OneReach.ai, where I build
@@ -106,6 +115,19 @@
                 <br />
                 This is my way of showing who I am: someone who keeps building,
                 keeps learning, and always comes back stronger.
+              </p>
+              <p class="intro_text" id="intro_text_by-cats">
+                About Our Human 🐾
+                <br />
+                Hi there. We’re Khromka & Pandasya, the real bosses around here.
+                <br />
+                Our human, Catherine, is great at that typing stuff. She makes
+                the box glow and talks to invisible people on the screen.
+                <br />
+                She gives excellent chin rubs and only sometimes forgets snack
+                time. 10/10 would nap near again.
+                <br />
+                Hire her. Or us. We're available for remote work (and naps).
               </p>
             </div>
           </div>
@@ -277,7 +299,27 @@
             </div>
           </div>
         </div>
+        <div class="container">
+          <p class="footer__text">
+            Built with code, caffeine, and the supervision of two cats.
+          </p>
+        </div>
       </div>
     </main>
+    <script>
+      const catBadge = document.querySelector(".contact-info__sub-header_icon");
+      const aboutHuman = document.getElementById("intro_text_by-me");
+      const aboutCats = document.getElementById("intro_text_by-cats");
+
+      catBadge.addEventListener("mouseenter", () => {
+        aboutHuman.style.display = "none";
+        aboutCats.style.display = "block";
+      });
+
+      catBadge.addEventListener("mouseleave", () => {
+        aboutHuman.style.display = "block";
+        aboutCats.style.display = "none";
+      });
+    </script>
   </body>
 </html>
